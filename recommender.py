@@ -9,7 +9,7 @@ def clean_title(title):
     title = re.sub(r"[^a-z0-9 ]", "", title)
     return title
 
-def load_model(csv_path=r"C:\Users\sarat\OneDrive\Desktop\suraksha\movies.csv"):
+def load_model(csv_path=r"movies.csv"):
     movies = pd.read_csv(csv_path)
 
     movies["clean_title"] = movies["title"].apply(clean_title)
